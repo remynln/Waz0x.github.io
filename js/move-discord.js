@@ -10,12 +10,9 @@ function move() {
     id = setInterval(frame, 10);
     function frame() {
         if ((pos <= 70 && state === -1) || (pos > 110 && state === 1)) {
-            console.log(state)
             state *= -1;
-            console.log(state)
             clearInterval(id);
         } else {
-            console.log(speed)
             pos+=speed*state;
             (((state === -1) ? (pos <= 100 ? (speed < 0.2 ? 0 : speed -= 0.2) : 0) : (pos >= 100 ? (speed >= 5 ? 0 : speed += 0.2) : 0)));
             elem.style.top = pos + '%';
