@@ -66,6 +66,14 @@ body {
   width: 100%;
   text-align: center;
 }
+#discord-card {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  padding: 0 10px;
+  width: 100%;
+  text-align: center;
+}
 h2 {
   text-transform: uppercase;
   font-size: 50px;
