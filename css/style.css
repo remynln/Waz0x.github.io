@@ -144,7 +144,7 @@ p {
 }
 
 #name:hover::before {
-  transform: scaleX(0.2);
+  transform: scaleX(20%);
   transform-origin: 0 left;
 }
 

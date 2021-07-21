@@ -4,7 +4,7 @@ var pos = 110;
 
 function move() {
     var speed = (state === -1 ? 5 : 1);
-    var elem = document.getElementById("discord-card");   
+    var elem = document.getElementById("discord-card");
     
     clearInterval(id);
     id = setInterval(frame, 10);
