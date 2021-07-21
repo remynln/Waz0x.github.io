@@ -137,3 +137,25 @@ p {
     height: 4px;
   }
 }
+
+#name::before {  
+  transform: scaleX(0);
+  transform-origin: 0 right;
+}
+
+#name:hover::before {
+  transform: scaleX(0.2);
+  transform-origin: 0 left;
+}
+
+#name::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0%; right: 0%; bottom: 0%; left: 0%;
+  height: 60%;
+  inset: 0 0 0 0;
+  background: hsl(168, 42%, 55%);
+  z-index: -1;
+  transition: transform .5s ease;
+}
