@@ -6,7 +6,11 @@
   font: inherit;
   vertical-align: baseline;  
 }
-
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: #ffffff;
+}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -60,10 +64,11 @@ body {
 
 #intro {
   position: absolute;
-  left: 0;
+  width: fit-content;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0 10px;
-  width: 100%;
   text-align: center;
 }
 #discord-card {
@@ -73,6 +78,21 @@ body {
   padding: 0 10px;
   width: 100%;
   text-align: center;
+}
+#head {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 120;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  position: absolute;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 6%;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
 }
 h2 {
   text-transform: uppercase;
@@ -144,7 +164,7 @@ p {
 }
 
 #name:hover::before {
-  transform: scaleX(20%);
+  transform: scaleX(100%);
   transform-origin: 0 left;
 }
 
@@ -152,8 +172,29 @@ p {
   content: " ";
   display: block;
   position: absolute;
-  top: 0%; right: 0%; bottom: 0%; left: 0%;
   height: 60%;
+  inset: 0 0 0 0;
+  background: hsl(168, 42%, 55%);
+  z-index: -1;
+  transition: transform .5s ease;
+}
+
+#line::before {  
+  transform: scaleX(0);
+  transform-origin: 0 right;
+}
+
+#line:hover::before {
+  transform: scaleX(100%);
+  transform-origin: 0 left;
+}
+
+#line::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 100%; right: 0%; bottom: 0%; left: 0%;
+  height: 5%;
   inset: 0 0 0 0;
   background: hsl(168, 42%, 55%);
   z-index: -1;
