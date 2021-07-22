@@ -6,7 +6,7 @@ function showRepo() {
     .then(response => response.json())
     .then(data => {
         for (let i = 0; data[i]; i++) {
-            array.push(data[i].name)
+                array.push(data[i].name + (data [i].fork ? " (forked)" : ""))
         }
         console.log(array)
         for (var elements in array) {
