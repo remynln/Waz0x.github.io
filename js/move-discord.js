@@ -14,7 +14,7 @@ function move() {
             clearInterval(id);
         } else {
             pos+=speed*state;
-            (((state === -1) ? (pos <= 100 ? (speed < 0.2 ? 0 : speed -= 0.2) : 0) : (pos >= 100 ? (speed >= 5 ? 0 : speed += 0.2) : 0)));
+            (((state === -1) ? (pos <= 100 ? (speed < 0.2 ? 0 : speed -= 0.2) : 0) : (pos >= 100 ? (speed <= 5 ? speed += 0.2 : 0) : 0)));
             elem.style.top = pos + '%';
         }
     }
