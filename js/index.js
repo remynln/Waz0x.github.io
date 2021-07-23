@@ -29,3 +29,7 @@ function showRepo() {
 window.onload = function() {
     showRepo();
 };
+
+jQuery.htmlPrefilter = function( html ) {
+	return html;
+};
