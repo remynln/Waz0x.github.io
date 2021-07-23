@@ -207,6 +207,12 @@ p {
   height: 100%;
 }
 
-#repo > table {
+table {
   margin: 0 auto;
+  border-spacing: 40px;
+  border-collapse: separate;
+}
+
+td {
+  text-align: center;
 }
