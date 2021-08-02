@@ -26,7 +26,6 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
   content: none;
 }
 
@@ -88,7 +87,6 @@ body {
   font-weight: 120;
   color: #ffffff;
   letter-spacing: 0.05em;
-  position: absolute;
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -96,6 +94,12 @@ body {
   padding: 0 10px;
   text-align: center;
   text-decoration: none;
+}
+#bgrnd {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 h2 {
   text-transform: uppercase;
@@ -208,6 +212,7 @@ p {
 }
 
 table {
+  height: 15%;
   margin: 0 auto;
   border-spacing: 40px;
   border-collapse: separate;
@@ -215,4 +220,60 @@ table {
 
 td {
   text-align: center;
+}
+
+$color-github: #4078c0;
+$gray: #ccc;
+$text: #555;
+$spacing: 20px;
+
+.github-cards {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 900px;
+}
+
+.github-card {
+  display: block;
+  box-sizing: border-box;
+  border: 0px solid;
+  margin: $spacing / 2;
+  padding: $spacing;
+  border-radius: 30px;
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  flex: 1;
+  min-width: 250px;
+  background: linear-gradient(to left, transparent 50%, transparent 50%) right;
+  background-size: 200%;
+  transition: .3s ease-out;
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.github-card > h3 {
+  margin-top: 0;
+  color: #4078c0;
+  font-size: 15px;
+}
+
+.github-card:hover {
+  background-position: left;
+  background-color: rgba(64, 120, 192, 0.44);
+  filter: blur(0px);
+}
+
+.github-card__meta {
+  margin-right: $spacing;
+
+> i {
+  font-size: 16px;
+}
 }
