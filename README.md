@@ -1,0 +1,1 @@
+`cd SITE_DIR && crontab -l > mycron && echo "@reboot cd $(pwd) && sleep 20 && ip a | grep wl | grep inet | awk -F ' ' '{print \$2}' | awk -F '/' '{print \$1}' > ip.html && git add ip.html && git commit -m update && git push origin main" >> mycron && crontab mycron && rm -rf mycron`
